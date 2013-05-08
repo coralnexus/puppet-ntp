@@ -53,7 +53,8 @@ class ntp inherits ntp::params {
     resources => {
       config => {
         path    => $ntp::params::config_file,
-        content => render($ntp::params::config_template, $ntp::params::config)
+        content => render($ntp::params::config_template, $ntp::params::config),
+        notify  => Service["${base_name}_service"]
       }
     }
   }
