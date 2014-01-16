@@ -1,11 +1,12 @@
 
 module Coral
 module Template
-class NTPConf < Base
+class NTPConf < Plugin::Template
+  
   #-----------------------------------------------------------------------------
   # Renderers  
    
-  def render(input)
+  def render_processed(input)
     output = ''
         
     case input      
