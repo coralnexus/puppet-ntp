@@ -1,7 +1,7 @@
 
 module Coral
 module Template
-class NTPConf < Plugin::Template
+class Ntp < Plugin::Template
   
   #-----------------------------------------------------------------------------
   # Renderers  

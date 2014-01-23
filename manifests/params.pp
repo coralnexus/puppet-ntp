@@ -13,7 +13,7 @@ class ntp::params inherits ntp::default {
   #---
 
   $config_file     = module_param('config_file')
-  $config_template = module_param('config_template', 'NTPConf')
+  $config_template = module_param('config_template', 'ntp')
   $config          = module_hash('config')
 
   #---
