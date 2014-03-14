@@ -27,7 +27,7 @@ class ntp inherits ntp::params {
   #-----------------------------------------------------------------------------
   # Installation
 
-  coral::package { $base_name:
+  corl::package { $base_name:
     resources => {
       build_packages  => {
         name => $ntp::params::build_package_names
@@ -49,7 +49,7 @@ class ntp inherits ntp::params {
   #-----------------------------------------------------------------------------
   # Configuration
 
-  coral::file { $base_name:
+  corl::file { $base_name:
     resources => {
       config => {
         path    => $ntp::params::config_file,
@@ -62,12 +62,12 @@ class ntp inherits ntp::params {
   #-----------------------------------------------------------------------------
   # Actions
 
-  coral::exec { $base_name: }
+  corl::exec { $base_name: }
 
   #-----------------------------------------------------------------------------
   # Services
 
-  coral::service { $base_name:
+  corl::service { $base_name:
     resources => {
       service => {
         name       => $ntp::params::service_name,
@@ -76,12 +76,12 @@ class ntp inherits ntp::params {
         hasrestart => true,
       }
     },
-    require => [ Coral::Package[$base_name], Coral::File[$base_name] ]
+    require => [ Corl::Package[$base_name], Corl::File[$base_name] ]
   }
 
   #---
 
-  coral::cron { $base_name:
-    require => Coral::Service[$base_name]
+  corl::cron { $base_name:
+    require => Corl::Service[$base_name]
   }
 }

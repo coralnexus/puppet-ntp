@@ -1,5 +1,5 @@
-## coralnexus-ntp module
+### coralnexus-ntp module
 
-## Overview
+### Overview
 
 This module installs, configures, and manages the NTP service.

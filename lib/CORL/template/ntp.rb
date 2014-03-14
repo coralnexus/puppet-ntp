@@ -1,7 +1,7 @@
 
-module Coral
+module CORL
 module Template
-class Ntp < Plugin::Template
+class Ntp < CORL.plugin_class(:template)
   
   #-----------------------------------------------------------------------------
   # Renderers  

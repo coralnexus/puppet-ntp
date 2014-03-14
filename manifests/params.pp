@@ -1,5 +1,5 @@
 
-class ntp::params inherits ntp::default {
+class ntp::params {
 
   $base_name = 'ntp'
 
