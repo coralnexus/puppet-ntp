@@ -18,10 +18,8 @@ class ntp::default {
           'clockstats file clockstats type day enable'
         ],
         'server'     => [
-          '0.debian.pool.ntp.org iburst',
-          '1.debian.pool.ntp.org iburst',
-          '2.debian.pool.ntp.org iburst',
-          '3.debian.pool.ntp.org iburst'
+          'ntp.ubuntu.com',
+          'pool.ntp.org'
         ],
         'restrict' => [
           '-4 default kod notrap nomodify nopeer noquery',
