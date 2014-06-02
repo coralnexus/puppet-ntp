@@ -1,7 +1,7 @@
 
-module CORL
+module Nucleon
 module Template
-class Ntp < CORL.plugin_class(:template)
+class Ntp < CORL.plugin_class(:nucleon, :template)
   
   #-----------------------------------------------------------------------------
   # Renderers  
